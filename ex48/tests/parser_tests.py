@@ -3,9 +3,11 @@ from ex48 import lexicon
 from ex48 import parser
 
 def test_parse_verb():
-    assert_equal(parser.parse_verb(lexicon.scan("kill bear")),('verb', 'kill'))
+    word_list = [('verb', 'run'), ('direction', 'north')]
+    parser.parse.parse_addlist(word_list)
+    assert_equal(parser.parse.parse_verb(lexicon.scan("kill bear")),('verb', 'kill'))
     word_list=lexicon.scan("bear")
-    assert_raises(parser.ParserError,parser.parse_verb,word_list)
+    assert_raises(parser.ParserError,parser.parse.parse_verb,word_list)
 
 def test_directions():
     assert_equal(lexicon.scan("north"), [('direction', 'north')])

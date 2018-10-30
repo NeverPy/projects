@@ -7,7 +7,9 @@ def test_parse_verb():
     parser.parse.parse_addlist(word_list)
     assert_equal(parser.parse.parse_verb(lexicon.scan("kill bear")),('verb', 'kill'))
     word_list=lexicon.scan("bear")
-    assert_raises(parser.ParserError,parser.parse.parse_verb,word_list)
+    assert_raises(parser.ParserError,parser.parse.parse_verb,word_list)   
+    
+
 
 def test_directions():
     assert_equal(lexicon.scan("north"), [('direction', 'north')])

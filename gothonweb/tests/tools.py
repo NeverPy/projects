@@ -2,14 +2,14 @@ from nose.tools import *
 import re
 
 def assert_response(resp, contains=None, matches=None, headers=None, status="200"):
-
+    
     assert status in resp.status, "Expected response %r not in %r" % (status, resp.status)
 
     if status == "404 Not Found":
         assert resp.data , "Response data is empty." 
 
     if contains:
-        assert contains in resp.data, "Response does not contain %r" % contains
+        assert contains in resp.data, "%r does not contain %r" % (resp.data,contains)
 
     if matches:
         reg = re.compile(matches)

@@ -107,7 +107,7 @@ the_bridge.add_paths({
     'throw the bomb': the_end_bridge,
     'slowly place the bomb': escape_pod
 })
-the_end_weapon = Room("the_end_weapon","the_end_weapon")
+the_end_weapon = Room("death","the_end_weapon")
 
 
 laser_weapon_armory.add_paths({
@@ -115,8 +115,8 @@ laser_weapon_armory.add_paths({
     '*': the_end_weapon
 })
 
-the_end_shoot = Room("the_end_shoot","the_end_shoot")
-the_end_dodge = Room("the_end_dodge","the_end_dodge")
+the_end_shoot = Room("death","the_end_shoot")
+the_end_dodge = Room("death","the_end_dodge")
 central_corridor.add_paths({
     'shoot!': the_end_shoot,
     'dodge!': the_end_dodge,
